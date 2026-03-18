@@ -1,40 +1,39 @@
 /*ALL*/
 * {
-    margin: 0;
-    padding: 0;
-    --background-blue: #1F2937;
-    --background-blue-hover: #3f4f66;
-    --background-blue-active: #647894;
-    --background-gray: #dfdde0;
-    --background-white: white;
-    --background-black: black;
-    --positive-green: #10B981;
-    --positive-green-hover: #34D399;
-    --negative-red: #EF4444;
-    --negative-red-hover: #F87171;
+  margin: 0;
+  padding: 0;
+  --background-blue: #1f2937;
+  --background-blue-hover: #3f4f66;
+  --background-blue-active: #647894;
+  --background-gray: #dfdde0;
+  --background-white: white;
+  --background-black: black;
+  --positive-green: #10b981;
+  --positive-green-hover: #34d399;
+  --negative-red: #ef4444;
+  --negative-red-hover: #f87171;
 
-    --display: 12vh;
-    --spacing: 1.5em;
-    --border-radius: 0.5em;
+  --display: 12vh;
+  --spacing: 1.5em;
+  --border-radius: 0.5em;
 }
 
 /*HEADER*/
 header {
-    background-color: var(--background-blue);
-    color: var(--background-white);
-    width: 100vw;
-    height: var(--display);
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    /* padding: 0em 0.5em 0em 0em */
-    /* margin-right: 5em;
+  background-color: var(--background-blue);
+  color: var(--background-white);
+  width: 100vw;
+  height: var(--display);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0em 0.5em 0em 0em */
+  /* margin-right: 5em;
     margin-left: 0.5em; */
-    
 }
 
 #heading {
-    font-size: 2.4em;
+  font-size: 2.4em;
 }
 
 #city-input {
@@ -55,15 +54,15 @@ header {
 
 /*MAIN*/
 main {
-    width: 100vw;
-    height: calc(100vh - var(--display));
-    background-color: var(--background-gray);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: var(--spacing);
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: calc(100vh - var(--display));
+  background-color: var(--background-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--spacing);
+  justify-content: center;
+  align-items: center;
 }
 
 #content-container {

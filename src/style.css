@@ -1,3 +1,45 @@
-body {
-  background-color: pink;
+/*ALL*/
+* {
+    margin: 0;
+    padding: 0;
+    --background-blue: #1F2937;
+    --background-blue-hover: #3f4f66;
+    --background-blue-active: #647894;
+    --background-gray: #dfdde0;
+    --background-white: white;
+    --background-black: black;
+    --positive-green: #10B981;
+    --positive-green-hover: #34D399;
+    --negative-red: #EF4444;
+    --negative-red-hover: #F87171;
+
+    --display: 15vh;
+    --spacing: 1.5em;
+}
+
+/*HEADER*/
+header {
+    background-color: var(--background-blue);
+    color: var(--background-white);
+    width: 100vw;
+    height: var(--display);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#heading {
+    font-size: 2.4em;
+}
+
+/*MAIN*/
+#main {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--spacing);
 }

@@ -1,7 +1,8 @@
 (function submit() {
-  const submitBtn = document.querySelector("#submit-btn");
+  const form = document.querySelector("#address-form");
 
-  submitBtn.addEventListener("click", () => {
-    alert("submit clicked");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("submit clicked. It works");
   });
 })();

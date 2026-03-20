@@ -1,6 +1,8 @@
 export async function getWeather(city) {
   try {
-    const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=SCK8PST8V2BG7EMRFJB6HYMDD`);
+    const response = await fetch(
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=SCK8PST8V2BG7EMRFJB6HYMDD`,
+    );
 
     if (!response.ok) {
       throw new Error("Response is fucked, Kgodisho. ");
@@ -31,7 +33,6 @@ export async function getWeather(city) {
   }
 }
 
-
 async function test() {
   const {
     addressName,
@@ -42,7 +43,7 @@ async function test() {
     addressFeelsLike,
     addressCloudCover,
     addressHumidity,
-  } = await getWeather()
+  } = await getWeather();
   console.log(
     addressName,
     addressTemperature,
@@ -52,7 +53,7 @@ async function test() {
     addressFeelsLike,
     addressCloudCover,
     addressHumidity,
-  )
+  );
 }
 
 //test();

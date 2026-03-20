@@ -1,4 +1,4 @@
-import {getWeather} from "./weather.js"
+import { getWeather } from "./weather.js";
 
 (function submit() {
   const form = document.querySelector("#address-form");
@@ -9,7 +9,6 @@ import {getWeather} from "./weather.js"
     dataCall(`${address}`);
   });
 })();
-
 
 async function dataCall(name) {
   const {
@@ -32,14 +31,32 @@ async function dataCall(name) {
     addressFeelsLike,
     addressCloudCover,
     addressHumidity,
-  )
+  );
 
-  modifyValues(addressName, addressTemperature, addressConditions, addressDescription, addressWindSpeed, addressFeelsLike, addressCloudCover, addressHumidity)
+  modifyValues(
+    addressName,
+    addressTemperature,
+    addressConditions,
+    addressDescription,
+    addressWindSpeed,
+    addressFeelsLike,
+    addressCloudCover,
+    addressHumidity,
+  );
 }
 
 //dataCall("sydney")
 
-function modifyValues(name, temp, weather, description, windSpeedVal, feelsLikeVal, cloudCoverVal, humidityVal) {
+function modifyValues(
+  name,
+  temp,
+  weather,
+  description,
+  windSpeedVal,
+  feelsLikeVal,
+  cloudCoverVal,
+  humidityVal,
+) {
   const cityName = document.querySelector("#city-name");
   cityName.textContent = "";
   cityName.textContent = `${name}`;
@@ -60,7 +77,7 @@ function modifyValues(name, temp, weather, description, windSpeedVal, feelsLikeV
   windSpeed.textContent = "";
   windSpeed.textContent = `Wind speed: ${windSpeedVal} kph`;
 
-  const feelsLike = document.querySelector("#feels-like")
+  const feelsLike = document.querySelector("#feels-like");
   feelsLike.textContent = "";
   feelsLike.textContent = `Feels like: ${feelsLikeVal} °C`;
 

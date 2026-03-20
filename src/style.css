@@ -5,13 +5,13 @@
   --background-blue: #1f2937;
   --background-blue-hover: #3f4f66;
   --background-blue-active: #647894;
+  --orange: #f97316;
+  --orange-hover: #d36314;
+  --orange-active: #b15412;
   --background-gray: #dfdde0;
+  --dark-gray: #535353;
   --background-white: white;
   --background-black: black;
-  --positive-green: #10b981;
-  --positive-green-hover: #34d399;
-  --negative-red: #ef4444;
-  --negative-red-hover: #f87171;
 
   --display: 12vh;
   --spacing: 1.5em;
@@ -45,11 +45,22 @@ header {
 }
 
 #submit-btn {
-  background-color: orange;
+  background-color: var(--orange);
+  color: var(--background-white);
+  font-weight: bold;
+  font-size: 1rem;
   border: none;
   height: 2.5rem;
   width: 4rem;
   border-radius: var(--border-radius);
+}
+
+#submit-btn:hover {
+  background-color: var(--orange-hover);
+}
+
+#submit-btn:active {
+  background-color: var(--orange-active);
 }
 
 /*MAIN*/

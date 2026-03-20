@@ -1,12 +1,43 @@
+import {getWeather} from "./weather.js"
+
 (function submit() {
   const form = document.querySelector("#address-form");
+  const address = document.querySelector("#city-input").value;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    //dataCall(address);
     modifyValues("New York", 34, "Partly cloudy", "Cloudy with a chance of meatballs", 12, 45, 78, 50)
   });
 })();
 
+
+async function dataCall(name) {
+  const addressValues = getWeather(name);
+  const {
+    addressName,
+    addressTemperature,
+    addressConditions,
+    addressDescription,
+    addressWindSpeed,
+    addressFeelsLike,
+    addressCloudCover,
+    addressHumidity,
+  } = await getWeather(name);
+
+  console.log(
+    addressName,
+    addressTemperature,
+    addressConditions,
+    addressDescription,
+    addressWindSpeed,
+    addressFeelsLike,
+    addressCloudCover,
+    addressHumidity,
+  )
+}
+
+dataCall("sydney")
 
 function modifyValues(name, temp, weather, description, windSpeedVal, feelsLikeVal, cloudCoverVal, humidityVal) {
   const cityName = document.querySelector("#city-name");

@@ -61,7 +61,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding-top: var(--spacing);
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 

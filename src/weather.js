@@ -9,10 +9,29 @@ export async function getWeather(city) {
     }
     const data = await response.json();
 
-    console.log(data);
+    const addressName = data.address;
+    const addressTemperature = data.currentConditions.temp;
+    const addressConditions = data.currentConditions.conditions;
+    const addressDescription = data.description;
+    const addressWindSpeed = data.currentConditions.windspeed;
+    const addressFeelsLike = data.currentConditions.feelslike;
+    const addressCloudCover = data.currentConditions.cloudcover;
+    const addressHumidity = data.currentConditions.humidity;
+
+    return {
+      addressName,
+      addressTemperature,
+      addressConditions,
+      addressDescription,
+      addressWindSpeed,
+      addressFeelsLike,
+      addressCloudCover,
+      addressHumidity,
+    };
   } catch (error) {
     console.error(error.message);
   }
 }
 
-getWeather("johannesburg");
+console.log(getWeather("cape town"));
+//console.log(getWeather("johannesburg").addressName)

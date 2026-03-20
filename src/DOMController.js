@@ -35,6 +35,8 @@ async function dataCall(name) {
     addressCloudCover,
     addressHumidity,
   )
+
+  modifyValues(addressName, addressTemperature, addressConditions, addressDescription, addressWindSpeed, addressFeelsLike, addressCloudCover, addressHumidity)
 }
 
 dataCall("sydney")

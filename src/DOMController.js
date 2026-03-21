@@ -6,8 +6,7 @@ import { getWeather } from "./weather.js";
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    dataCall(`${address.value}`); //function call that
-    //console.log(address.value)
+    dataCall(`${address.value}`);
   });
 })();
 

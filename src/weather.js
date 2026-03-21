@@ -10,11 +10,11 @@ export async function getWeather(city) {
     const data = await response.json();
 
     const addressName = data.address;
-    const addressTemperature = data.currentConditions.temp;
+    const addressTemperature = Math.round((data.currentConditions.temp - 32) * 5/9);
     const addressConditions = data.currentConditions.conditions;
     const addressDescription = data.description;
     const addressWindSpeed = data.currentConditions.windspeed;
-    const addressFeelsLike = data.currentConditions.feelslike;
+    const addressFeelsLike = Math.round((data.currentConditions.feelslike - 32) * 5/9);
     const addressCloudCover = data.currentConditions.cloudcover;
     const addressHumidity = data.currentConditions.humidity;
 

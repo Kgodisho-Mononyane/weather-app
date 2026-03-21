@@ -47,7 +47,7 @@ function modifyValues(
 ) {
   const cityName = document.querySelector("#city-name");
   cityName.textContent = "";
-  cityName.textContent = `${nameVal}`;
+  cityName.textContent = `${nameVal.toUpperCase()}`;
 
   const tempValue = document.querySelector("#temperature-value");
   tempValue.textContent = "";

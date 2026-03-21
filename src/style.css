@@ -77,8 +77,41 @@ main {
 }
 
 #content-container {
-  background-color: blue;
+  background-color: var(--background-blue);
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 50vh;
+  width: 100vh;
+  border-radius: var(--border-radius);
+  padding: var(--spacing)
+}
+
+#city-name {
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 3em;
+}
+
+#temperature-value {
+  color: var(--background-white);
+  font-size: 2em;
+}
+
+#info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5em;
+  width: 100%;
+  background-color: green;
+  margin-bottom: 0;
+}
+
+.info {
+  background-color: white;
+  border-radius: var(--border-radius);
+  width: 100%;
+  background-color: var(--orange);
+  color: var(--background-white)
 }

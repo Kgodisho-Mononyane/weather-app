@@ -46,33 +46,26 @@ function modifyValues(
   humidityVal,
 ) {
   const cityName = document.querySelector("#city-name");
-  cityName.textContent = "";
   cityName.textContent = `${nameVal.toUpperCase()}`;
 
   const tempValue = document.querySelector("#temperature-value");
-  tempValue.textContent = "";
   tempValue.textContent = `${tempVal} °C`;
 
   const weatherValue = document.querySelector("#weather-value");
-  weatherValue.textContent = "";
   weatherValue.textContent = `${weatherVal}`;
 
   const weatherDescription = document.querySelector("#weather-description");
-  weatherDescription.textContent = "";
   weatherDescription.textContent = `${descriptionVal}`;
 
   const windSpeed = document.querySelector("#wind-speed");
-  windSpeed.textContent = "";
-  windSpeed.textContent = `Wind speed: ${windSpeedVal} kph`;
+  windSpeed.textContent = `WIND SPEED: ${windSpeedVal} KM/H`;
 
   const feelsLike = document.querySelector("#feels-like");
-  feelsLike.textContent = "";
-  feelsLike.textContent = `Feels like: ${feelsLikeVal} °C`;
+  feelsLike.textContent = `FEELS LIKE: ${feelsLikeVal} °C`;
 
   const cloudCover = document.querySelector("#cloud-cover");
-  cloudCover.textContent = `Cloud cover: ${cloudCoverVal}%`;
-  cloudCover.textContent = `Cloud cover: ${cloudCoverVal}%`;
+  cloudCover.textContent = `CLOUD COVER: ${cloudCoverVal}%`;
 
   const humidity = document.querySelector("#humidity");
-  humidity.textContent = `Humidity: ${humidityVal}%`;
+  humidity.textContent = `HUMIDITY: ${humidityVal}%`;
 }

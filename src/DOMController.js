@@ -2,11 +2,12 @@ import { getWeather } from "./weather.js";
 
 (function submit() {
   const form = document.querySelector("#address-form");
-  let address = document.querySelector("#city-input").value;
+  const address = document.querySelector("#address-input"); //input
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    dataCall(`${address}`);
+    dataCall(`${address.value}`); //function call that
+    //console.log(address.value)
   });
 })();
 
@@ -22,17 +23,6 @@ async function dataCall(name) {
     addressHumidity,
   } = await getWeather(`${name}`);
 
-  console.log(
-    addressName,
-    addressTemperature,
-    addressConditions,
-    addressDescription,
-    addressWindSpeed,
-    addressFeelsLike,
-    addressCloudCover,
-    addressHumidity,
-  );
-
   modifyValues(
     addressName,
     addressTemperature,
@@ -45,13 +35,11 @@ async function dataCall(name) {
   );
 }
 
-//dataCall("sydney")
-
 function modifyValues(
-  name,
-  temp,
-  weather,
-  description,
+  nameVal,
+  tempVal,
+  weatherVal,
+  descriptionVal,
   windSpeedVal,
   feelsLikeVal,
   cloudCoverVal,
@@ -59,19 +47,19 @@ function modifyValues(
 ) {
   const cityName = document.querySelector("#city-name");
   cityName.textContent = "";
-  cityName.textContent = `${name}`;
+  cityName.textContent = `${nameVal}`;
 
   const tempValue = document.querySelector("#temperature-value");
   tempValue.textContent = "";
-  tempValue.textContent = `${temp} °C`;
+  tempValue.textContent = `${tempVal} °C`;
 
   const weatherValue = document.querySelector("#weather-value");
   weatherValue.textContent = "";
-  weatherValue.textContent = `${weather}`;
+  weatherValue.textContent = `${weatherVal}`;
 
   const weatherDescription = document.querySelector("#weather-description");
   weatherDescription.textContent = "";
-  weatherDescription.textContent = `${description}`;
+  weatherDescription.textContent = `${descriptionVal}`;
 
   const windSpeed = document.querySelector("#wind-speed");
   windSpeed.textContent = "";

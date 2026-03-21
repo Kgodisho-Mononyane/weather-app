@@ -18,6 +18,17 @@ export async function getWeather(city) {
     const addressCloudCover = data.currentConditions.cloudcover;
     const addressHumidity = data.currentConditions.humidity;
 
+    // console.log(
+    //   addressName,
+    //   addressTemperature,
+    //   addressConditions,
+    //   addressDescription,
+    //   addressWindSpeed,
+    //   addressFeelsLike,
+    //   addressCloudCover,
+    //   addressHumidity,
+    // )
+
     return {
       addressName,
       addressTemperature,
@@ -32,28 +43,3 @@ export async function getWeather(city) {
     console.error(error.message);
   }
 }
-
-async function test() {
-  const {
-    addressName,
-    addressTemperature,
-    addressConditions,
-    addressDescription,
-    addressWindSpeed,
-    addressFeelsLike,
-    addressCloudCover,
-    addressHumidity,
-  } = await getWeather();
-  console.log(
-    addressName,
-    addressTemperature,
-    addressConditions,
-    addressDescription,
-    addressWindSpeed,
-    addressFeelsLike,
-    addressCloudCover,
-    addressHumidity,
-  );
-}
-
-//test();
